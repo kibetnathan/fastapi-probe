@@ -1,7 +1,9 @@
 import os
 from sqlmodel import SQLModel, create_engine, Session
+from dotenv import load_dotenv
 
 # Load dburl
+load_dotenv()
 DATABASE_URL = os.getenv(
     "DATABASE_URL", "postgresql://postgres:postgres@localhost:5432/todo_db"
 )
